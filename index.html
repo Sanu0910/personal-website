@@ -153,6 +153,13 @@
             <p>RADIO FREQUENCY INTEGRATED CIRCUITS (RFIC)</p>
         </div>
     </section>
+        <section id="education" class="education">
+        <h2>Education</h2>
+        <div class="education-card">
+            <p><strong>M.Tech in RF and Microwave Engineering</strong> - IIT Kharagpur (2023-25) (CGPA: 7.39)</p>
+            <p><strong>B.Tech in Electronics and Electrical Engineering</strong> - KIIT Bhubaneswar (2017-21) (CGPA: 7.37)</p>
+        </div>
+    </section>
     
     <section id="achievements" class="achievements">
         <h2>Certifications</h2>
@@ -162,6 +169,13 @@
             <p><strong>Satellite-based Navigation: A Journey from GPS to Mobile Phone Platform</strong> (March 2021) - ISRO IIRS Online Course</p>
         </div>
     </section>
+          <section id="volunteering" class="volunteering">
+        <h2>Volunteering Experience</h2>
+        <div class="volunteer-card">
+            <p><strong>Assistant Secretary</strong> (Jan ’24 - Dec ’24) & <strong>Webmaster</strong> (Jan ’25 - Dec ’25) at IEEE AP-MTTS SBC IIT Kharagpur</p>
+            <p><strong>Student Ambassador</strong> at IEEE Microwave Theory and Technology Society (2024)</p>
+        </div>
+    </section>
     
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
@@ -169,6 +183,22 @@
         <p>GitHub: <a href="https://github.com/Sanu0910" target="_blank">github.com/Sanu0910</a></p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/sanu-roy-84b43716a/" target="_blank">linkedin.com/in/sanu-roy</a></p>
     </section>
+          <script>
+        const quotes = [
+            "“The important thing is not to stop questioning. Curiosity has its own reason for existing.” – Albert Einstein",
+            "“If you can't explain it simply, you don't understand it well enough.” – Richard Feynman",
+            "“Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” – Albert Einstein",
+            "“The first principle is that you must not fool yourself and you are the easiest person to fool.” – Richard Feynman"
+        ];
+        
+        let index = 0;
+        function changeQuote() {
+            document.getElementById("quoteText").innerText = quotes[index];
+            index = (index + 1) % quotes.length;
+        }
+        
+        setInterval(changeQuote, 5000);
+    </script>
     
     <script>
         gsap.from(".hero-text", {opacity: 0, y: -50, duration: 1});
