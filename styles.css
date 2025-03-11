@@ -1,69 +1,71 @@
 body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(135deg, #1E3A8A, #2563EB);
-    color: #fff;
-    text-align: center;
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1e3a8a, #2563eb);
+  color: #fff;
+  text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .logo img {
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    margin-right: 15px;
+    object-fit: cover;
+    border: 3px solid white;
 }
 
+
 ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 a:hover {
-    color: #FFD700;
+  color: #ffd700;
 }
 
 /* Animated Project Cards */
 .project-card {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 20px;
-    border-radius: 15px;
-    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease-in-out;
-    backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease-in-out;
+  backdrop-filter: blur(8px);
 }
 
 .project-card:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
 }
