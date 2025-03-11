@@ -6,33 +6,43 @@ body {
     background: linear-gradient(135deg, #1E3A8A, #2563EB);
     color: #fff;
     text-align: center;
+    overflow-x: hidden;
 }
 
-/* Header Navigation */
+/* Header Navigation - Glassmorphism Effect */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
     background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    backdrop-filter: blur(12px);
     border-radius: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
 }
 
 /* Logo Section (Image + Name) */
 .logo {
     display: flex;
     align-items: center;
-    gap: 15px; /* Space between image and text */
+    gap: 15px;
 }
 
-/* Profile Image */
 .logo img {
-    width: 70px; /* Adjust image size */
-    height: 70px;
+    width: 80px;
+    height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+    transform: scale(1.1);
 }
 
 /* Name Styling */
@@ -48,13 +58,31 @@ ul {
     list-style: none;
     display: flex;
     gap: 20px;
+    margin-right: 20px;
 }
 
 a {
     text-decoration: none;
     color: white;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+/* Animated Underline */
+a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #FFD700;
+    transition: width 0.3s ease-in-out;
+}
+
+a:hover::after {
+    width: 100%;
 }
 
 a:hover {
@@ -64,25 +92,29 @@ a:hover {
 /* Hero Section */
 .hero {
     display: flex;
-    height: 80vh;
+    height: 90vh;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
 .highlight {
     color: #FFD700;
 }
 
+/* Call-to-Action Button */
 .btn {
     background: #FFD700;
     color: black;
     padding: 12px 24px;
-    border-radius: 25px;
+    border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: 0.3s;
+    transition: all 0.3s ease-in-out;
     box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.4);
+    margin-top: 10px;
 }
 
 .btn:hover {
@@ -92,14 +124,98 @@ a:hover {
 }
 
 /* Sections */
-.projects, .about, .contact {
-    padding: 50px 20px;
+section {
+    padding: 80px 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+/* Project Section */
+.projects {
+    text-align: center;
+}
+
+/* Project Grid Layout */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
 }
 
 /* Project Card Styling */
 .project-card {
-    background: white;
-    color: black;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
     padding: 20px;
-    margin: 10px;
-    border
+    border-radius: 15px;
+    text-align: left;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    backdrop-filter: blur(8px);
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Certifications & Other Sections */
+.certifications, .extracurricular, .volunteering, .contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+ul li {
+    list-style: none;
+    font-size: 1.2rem;
+    padding: 5px 0;
+}
+
+/* Contact Section */
+.contact p {
+    font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .logo {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 70px;
+    }
+
+    ul {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
