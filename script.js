@@ -25,3 +25,4 @@ VanillaTilt.init(document.querySelectorAll(".project-card"), {
     glare: true,
     "max-glare": 0.2
 });
+
