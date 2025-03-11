@@ -28,8 +28,8 @@ nav {
 
 /* Profile Image */
 .logo img {
-    width: 100px; /* Adjust image size */
-    height: 100px;
+    width: 70px; /* Adjust image size */
+    height: 70px;
     border-radius: 50%;
     object-fit: cover;
     border: 3px solid white;
