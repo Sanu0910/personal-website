@@ -1,71 +1,72 @@
 body {
-  font-family: "Montserrat", sans-serif;
-  margin: 0;
-  padding: 0;
-  background: linear-gradient(135deg, #1e3a8a, #2563eb);
-  color: #fff;
-  text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1E3A8A, #2563EB);
+    color: #fff;
+    text-align: center;
 }
 
 nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
 }
-
-.logo {
-  display: flex;
-  align-items: center;
-}
-
-.logo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid white;
-}
-
 
 ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+    list-style: none;
+    display: flex;
+    gap: 20px;
 }
 
 a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  transition: 0.3s;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
 }
 
 a:hover {
-  color: #ffd700;
+    color: #FFD700;
 }
 
-/* Animated Project Cards */
+.hero {
+    display: flex;
+    height: 80vh;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.highlight {
+    color: #FFD700;
+}
+
+.btn {
+    background: #FFD700;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #FFA500;
+    color: white;
+}
+
+.projects, .about, .contact {
+    padding: 50px 20px;
+}
+
 .project-card {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  padding: 20px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-  transition: transform 0.3s ease-in-out;
-  backdrop-filter: blur(8px);
-}
-
-.project-card:hover {
-  transform: scale(1.05);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
+    background: white;
+    color: black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
 }
