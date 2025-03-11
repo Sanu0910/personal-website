@@ -8,70 +8,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(135deg, #1E3A8A, #2563EB);
-            color: #fff;
-            text-align: center;
-        }
-        nav {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-        }
-        ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        a:hover {
-            color: #FFD700;
-        }
-        .hero {
-            display: flex;
-            height: 80vh;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .highlight {
-            color: #FFD700;
-        }
-        .btn {
-            background: #FFD700;
-            color: black;
-            padding: 10px 20px;
-            border-radius: 20px;
-            text-decoration: none;
-            transition: 0.3s;
-        }
-        .btn:hover {
-            background: #FFA500;
-            color: white;
-        }
-        .projects, .about, .contact, .volunteering, .education, .achievements, .extracurricular, .coursework {
-            padding: 50px 20px;
-        }
-        .project-card, .volunteer-card, .education-card, .achievement-card, .extra-card, .coursework-card {
-            background: white;
-            color: black;
-            padding: 20px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0px 4px 6px rgba(0,0,0,0.1);
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -96,121 +32,28 @@
             <a href="#projects" class="btn">View Projects</a>
         </div>
     </section>
+
     <section id="about" class="about">
         <h2>About Me</h2>
         <div class="about-card">
-        <p>I am an RF and Microwave Engineer with a strong foundation in antenna design, MMICs, radar systems, and EMI/EMC techniques. My expertise spans microwave circuit design, photonic reconfiguration, and RF system testing, with hands-on experience in tools like Ansys HFSS, Keysight ADS, and MATLAB.</p>
-        <p>Passionate about autonomous systems, satellite-based navigation, and advanced driving safety technologies, I am always eager to explore cutting-edge RF and wireless communication innovations.</p>
-        <p> I am a Research Intern at IISc Bangalore, working on RF system design and testing.</p>
+            <p>I am an RF and Microwave Engineer with a strong foundation in antenna design, MMICs, radar systems, and EMI/EMC techniques...</p>
+        </div>
     </section>
-<section id="projects" class="projects">
-    <h2>Projects & Internship<h2>
+
+    <section id="projects" class="projects">
+        <h2>Projects & Internship</h2>
         <div class="project-card">
-    <h3>M.Tech Project</h3>
-    <p><strong>Project Title:</strong> Photonic Reconfiguration of Microwave Devices (April ’24 - Till Now)<br>
-    <strong>Project Guide:</strong> Prof. Sarang Pendharker</p>
-    <p>In this project, novel approaches for the photonic reconfiguration of microwave devices, including antennas, phase shifters, microwave switches, and tunable components, were researched. In the realm of photonic reconfigurable antennas, the gain and directivity can be manipulated through the modulation of incident light. Similarly, for phase shifters, the phase across the device can be altered through light modulation. This methodology shows promise for the design and implementation of advanced microwave filters.</p>
-    <p><strong>Tools Used:</strong> Ansys HFSS, LaTeX, GitHub, Python, etc.</p>
-</div>
+            <h3>M.Tech Project</h3>
+            <p><strong>Project Title:</strong> Photonic Reconfiguration of Microwave Devices</p>
+            <p><strong>Tools Used:</strong> Ansys HFSS, LaTeX, GitHub, Python, etc.</p>
+        </div>
+    </section>
 
-<div class="project-card">
-    <h3>Summer Internship Project</h3>
-    <p><strong>Project Title:</strong> Laser Diode Driver Using Various Techniques (May ’24 - July ’24)<br>
-    <strong>Project Guide:</strong> Prof. Sarang Pendharker</p>
-    <p>This project aims to design a Laser Diode Driver using a Linear Voltage Regulator, Low-Dropout Voltage Regulator, and DC-DC Buck Converter techniques.</p>
-    <p><strong>Tools Used:</strong> LTspice, PCB Design</p>
-</div>
-
-<div class="project-card">
-    <h3>Research Internship</h3>
-    <p><strong>Research Intern – RF System Design</strong> (Jan ’25 - Till Now)<br>
-    <strong>Analog and RF Systems Laboratory, Dept. of ECE, IISc Bangalore</strong></p>
-    <p>Working on various aspects of RF system design, involving hands-on experience with electronic components in a laboratory environment. Engaging in design, testing, and optimization of RF circuits.</p>
-    <p><strong>Tools Used:</strong> Matlab, Python, RF Test Equipment, PCB Design, Microwave Circuit Simulation</p>
-</div>
-
-<div class="project-card">
-    <h3>Coursework Mini-Project</h3>
-    <p><strong>Design Lab Project (Substrate RT5870, Thickness(t)= 15 mil)</strong> (Jan ’24 - May ’24)<br>
-    <strong>Project Guide:</strong> Prof. Miranl Kanti Mandal</p>
-    <p>Designed and simulated a Bias Tee (S21 ≈ −40 dB) and Band Stop Filter (BSF) (S21 ≈ −40 dB) with Z0 = 50 Ω for 14 GHz on HFSS.</p>
-    <p>Designed a Branch Line Coupler (BLC) and Wilkinson Power Divider (WPD) for 14 GHz on HFSS.</p>
-    <p>Designed impedance matching using single shunt stub matching, open stub matching, and Quarter Wave Transformer (S21 ≈ −35 dB) for 14 GHz on HFSS.</p>
-    <p>Designed a two-element microstrip patch array antenna for 14 GHz on HFSS with a bandwidth of approximately 600 MHz.</p>
-    <p>Designed a microwave amplifier and a microwave detector for 14 GHz on ADS and implemented their layouts in ADS.</p>
-    <p>Designed a sub-harmonic mixer with IF 20 MHz, LO 6.90 GHz, RF 14 GHz, and a conversion gain of -11.414 dB on ADS.</p>
-</div>
-    </section>
-    
-    <section id="coursework" class="coursework">
-        <h2>Coursework</h2>
-        <div class="coursework-card">
-            <p>ADVANCED ELECTROMAGNETIC ENGINEERING</p>
-            <p>ANALYTICAL AND COMPUTATIONAL TECHNIQUES IN ELECTROMAGNETICS</p>
-            <p>ACTIVE AND PASSIVE RF COMPONENTS</p>
-            <p>VLSI INTERCONNECTS</p>
-            <p>OPTICAL FIBRES, COMPONENTS AND DEVICES</p>
-            <p>ANTENNA THEORY AND PRACTICE</p>
-            <p>MICROWAVE AND MILLIMETER WAVE INTEGRATED CIRCUITS</p>
-            <p>RADAR SIGNATURE ANALYSIS AND RADAR IMAGING</p>
-            <p>EMI AND EMC TECHNIQUES</p>
-            <p>MIXED SIGNAL AND RF DESIGN</p>
-            <p>RADIO FREQUENCY INTEGRATED CIRCUITS (RFIC)</p>
-        </div>
-    </section>
-        <section id="education" class="education">
-        <h2>Education</h2>
-        <div class="education-card">
-            <p><strong>M.Tech in RF and Microwave Engineering</strong> - IIT Kharagpur (2023-25) (First Class)</p>
-            <p><strong>B.Tech in Electronics and Electrical Engineering</strong> - KIIT Bhubaneswar (2017-21) (First Class)</p>
-        </div>
-    </section>
-    
-    <section id="certifications" class="certifications">
-        <h2>Certifications</h2>
-        <div class="achievement-card">
-            <p><strong>Professional Course in Power Semiconductor Devices</strong> (September 2024) - SemiX, IIT Bombay</p>
-            <p><strong>SEMICONDUCTOR FABRICATION 101</strong> (June 2024) - Purdue University, University of Texas at Austin, Intel Corporation (Online Mode)</p>
-            <p><strong>IISC CeNSE Summer School on Semiconductor Technology and Microfabrication</strong> (June 2024) - IISC Centre for Nano Science and Engineering (CeNSE) (Online Mode)</p>
-            <p><strong>Satellite-based Navigation: A Journey from GPS to Mobile Phone Platform</strong> (March 2021) - ISRO IIRS Online Course</p>
-        </div>
-    </section>
-          <section id="volunteering" class="volunteering">
-        <h2>Volunteering Experience</h2>
-        <div class="volunteer-card">
-            <p><strong>Webmaster</strong> (Jan ’25 - Dec ’25) at IEEE AP-MTTS SBC IIT Kharagpur</p>
-            <p><strong>Assistant Secretary</strong> (Jan ’24 - Dec ’24)</p>
-            <p><strong>Volunteering at IEEE INDICON 2024</strong>
-            <p><strong>Student Ambassador</strong> at IEEE Microwave Theory and Technology Society (2024)</p>
-        </div>
-    </section>
-    
     <section id="contact" class="contact">
         <h2>Contact Me</h2>
         <p>Email: <a href="mailto:sanuroy@kgpian.iitkgp.ac.in">sanuroy@kgpian.iitkgp.ac.in</a></p>
-        <p>GitHub: <a href="https://github.com/Sanu0910" target="_blank">github.com/Sanu0910</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/sanu-roy-84b43716a/" target="_blank">linkedin.com/in/sanu-roy</a></p>
     </section>
-          <script>
-        const quotes = [
-            "“The important thing is not to stop questioning. Curiosity has its own reason for existing.” – Albert Einstein",
-            "“If you can't explain it simply, you don't understand it well enough.” – Richard Feynman",
-            "“Imagination is more important than knowledge. Knowledge is limited. Imagination encircles the world.” – Albert Einstein",
-            "“The first principle is that you must not fool yourself and you are the easiest person to fool.” – Richard Feynman"
-        ];
-        
-        let index = 0;
-        function changeQuote() {
-            document.getElementById("quoteText").innerText = quotes[index];
-            index = (index + 1) % quotes.length;
-        }
-        
-        setInterval(changeQuote, 5000);
-    </script>
-    
-    <script>
-        gsap.from(".hero-text", {opacity: 0, y: -50, duration: 1});
-        gsap.from(".project-card, .volunteer-card, .education-card, .achievement-card, .extra-card, .coursework-card", {opacity: 0, x: -50, duration: 1, stagger: 0.3});
-    </script>
+
+    <script src="script.js"></script>
 </body>
 </html>
