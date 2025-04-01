@@ -1,24 +1,24 @@
 /* General Styles */
-body {
-    font-family: 'Montserrat', sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
     background: url('background.png') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
-    text-align: center;
     overflow-x: hidden;
+    scroll-behavior: smooth;
     position: relative;
 }
 
-/* Background Overlay */
+/* Overlay for background readability */
 body::before {
     content: "";
     position: fixed;
     top: 0; left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6); /* dark overlay */
+    background: rgba(0, 0, 0, 0.6);
     z-index: -1;
 }
 
@@ -27,6 +27,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 15px 30px;
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(12px);
@@ -36,13 +37,15 @@ nav {
     top: 0;
     z-index: 1000;
     box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+    overflow-x: auto;
 }
 
-/* Logo Section (Image + Name) */
+/* Logo Section */
 .logo {
     display: flex;
     align-items: center;
     gap: 15px;
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -65,21 +68,21 @@ nav {
     margin: 0;
 }
 
-//* Force the navigation list to wrap if needed */
+/* Navigation Links */
 ul {
     list-style: none;
     display: flex;
-    flex-wrap: wrap; /* allow items to wrap */
     gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     margin: 0;
     padding: 0;
 }
 
-/* Optional: Hide overflow from pushing outside screen */
-nav {
-    overflow-x: auto;
+ul li {
+    list-style: none;
 }
-
 
 a {
     text-decoration: none;
@@ -87,8 +90,24 @@ a {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     position: relative;
+    padding: 8px 10px;
 }
 
+/* Resume Button Styling */
+ul li:last-child a {
+    background-color: #FFD700;
+    color: black;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+ul li:last-child a:hover {
+    background-color: #FFA500;
+    color: white;
+}
+
+/* Underline Hover Animation */
 a::after {
     content: "";
     position: absolute;
@@ -104,7 +123,7 @@ a:hover::after {
     width: 100%;
 }
 
-a:hover {
+a:hover:not(.btn):not(ul li:last-child a) {
     color: #FFD700;
 }
 
@@ -116,13 +135,25 @@ a:hover {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    padding: 0 20px;
     animation: fadeIn 1.5s ease-in-out;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    max-width: 800px;
 }
 
 .highlight {
     color: #FFD700;
 }
 
+/* Call-to-Action Button */
 .btn {
     background: #FFD700;
     color: black;
@@ -132,27 +163,29 @@ a:hover {
     font-weight: bold;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 4px 10px rgba(255, 215, 0, 0.4);
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .btn:hover {
     background: #FFA500;
     color: white;
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
-/* Sections */
+/* Section Base Style */
 section {
-    padding: 80px 20px;
-    opacity: 1; /* make visible until fade-in JS is implemented */
+    padding: 100px 20px 60px;
+    opacity: 1;
     transform: translateY(0);
     transition: opacity 1s ease-out, transform 1s ease-out;
+    text-align: center;
 }
 
 .projects {
     text-align: center;
 }
 
+/* Grid for Self-Projects */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -161,6 +194,7 @@ section {
     padding: 20px;
 }
 
+/* Project Cards */
 .project-card {
     background: rgba(255, 255, 255, 0.15);
     color: white;
@@ -170,7 +204,6 @@ section {
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     backdrop-filter: blur(8px);
     box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
-    overflow: hidden;
 }
 
 .project-card:hover {
@@ -178,17 +211,25 @@ section {
     box-shadow: 0px 8px 20px rgba(255, 255, 255, 0.3);
 }
 
-.certifications, .extracurricular, .volunteering, .contact {
-    text-align: center;
+/* Section Specifics */
+.certifications,
+.extracurricular,
+.volunteering,
+.contact {
     padding: 60px 20px;
 }
 
-ul li {
-    list-style: none;
-    font-size: 1.2rem;
-    padding: 5px 0;
+/* Coursework Cards */
+.coursework-card, .education-card, .achievement-card, .volunteer-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
 }
 
+/* Contact Section */
 .contact p {
     font-size: 1.2rem;
 }
@@ -197,12 +238,14 @@ ul li {
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        text-align: center;
+        align-items: flex-start;
         padding: 15px;
     }
 
     .logo {
         flex-direction: column;
+        align-items: center;
+        margin-bottom: 10px;
     }
 
     .logo img {
@@ -212,8 +255,17 @@ ul li {
 
     ul {
         flex-direction: column;
+        align-items: center;
+        width: 100%;
         gap: 10px;
-        margin-top: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
     }
 
     .projects-grid {
